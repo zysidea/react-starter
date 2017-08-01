@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const path = require('path');
 const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
 module.exports = {
@@ -9,11 +10,11 @@ module.exports = {
     port: 8080,
     inline: true
   },
-  entry: __dirname+'/app/index.js',
+  entry: path.join(__dirname,'/app/index.jsx'),
   output: {
-    path: __dirname+'/build',
+    path: path.join(__dirname,'/build'),
     publicPath: '/',
-    filename: "bundle.js"
+    filename: 'bundle.js'
   },
   module: {
     loaders: [
@@ -24,7 +25,7 @@ module.exports = {
       {
         test: /\.js[x]?$/,
         exclude: /node_modules/,
-        loader: "babel-loader",
+        loader: 'babel-loader',
       },
       {
         test: /\.css$/,
@@ -34,6 +35,9 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new OpenBrowserPlugin({url: 'http://localhost:8080'})
-  ]
+    new OpenBrowserPlugin({ url: 'http://localhost:8080' })
+  ],
+  resolve: {
+    extensions: ['.js', '.jsx']
+  }
 };

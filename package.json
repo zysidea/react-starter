@@ -2,7 +2,7 @@
   "name": "untitled",
   "version": "1.0.0",
   "description": "",
-  "main": "./app/index.js",
+  "main": "./app/index.jsx",
   "scripts": {
     "build": "webpack",
     "start": "webpack-dev-server --inline --progress --hot --content-base app --history-api-fallback"
