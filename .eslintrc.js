@@ -1,4 +1,4 @@
-{
+module.exports = {
   "parser": "babel-eslint",
   "extends": "airbnb",
   "env": {
@@ -6,11 +6,11 @@
     "node": true
   },
   "parserOptions": {
-     "ecmaVersion": 6,
-     "sourceType": "module",
-     "ecmaFeatures": {
-       "jsx": true
-     }
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
   },
   "globals": {
     "window": true,
@@ -46,4 +46,4 @@
     "import",
     "promise"
   ]
-}
+};
