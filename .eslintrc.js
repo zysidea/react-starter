@@ -17,6 +17,14 @@ module.exports = {
     "document": true
   },
   "rules": {
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }],
     "arrow-parens": 0,
     "class-methods-use-this": 0,
     "compat/compat": 2,
